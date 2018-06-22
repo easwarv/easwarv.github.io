@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+
+  <header>
+    <ul class="nav">
+      <li class="nav-item"><a href="">Home</a></li>
+      <li class="nav-item" id="product" ng-click="showSubMenu()"><a href="">Products</a>
+      <ul class="nav-submenu">
+        <li class="nav-subitem"><a href="./product.html">Product 1</a></li>
+        <li class="nav-subitem"><a href="./product.html">Product 2</a></li>
+        <li class="nav-subitem"><a href="./product.html">Product 3</a></li>
+        <li class="nav-subitem"><a href="./product.html">Product 4</a></li>
+      </ul>
+      </li>
+      <li class="nav-item"><a href="">Clients</a></li>
+      <li class="nav-item"><a href="">Pricing</a></li>
+      <li class="nav-item"><a href="">Contact</a></li>
+    </ul>
+  </header>
+  <div>
+    <table cellspacing="0" >
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quality</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="fruit in fruits">
+          <td>{{fruit.name}}</td>
+          <td>{{fruit.quality}}</td>
+          <td>{{fruit.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <footer>
+    <ul class="nav">
+      <li class="nav-item"><a href="">Copyrights</a></li>
+      <li class="nav-item"><a href="">Link1</a></li>
+      <li class="nav-item"><a href="">Link2</a></li>
+    </ul>
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+</html>
